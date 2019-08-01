@@ -1,0 +1,277 @@
+﻿@model IEnumerable<SHouseMVC.ElectrDevice>
+
+    <div class="field-current-device">
+        @foreach (SHouseMVC.ElectrDevice item in Model)
+        {
+            if (item is SHouseMVC.Microwave)
+            {
+                <div class="form-device">
+                    <img src="@(((SHouseMVC.Microwave)item).Img)" class="image-device" />
+                    <a href="/Devices/Delete/@(((SHouseMVC.Microwave)item).Id)/Microwave">
+                        <img src="~/Content/Images/icon/1.png" class="button-remove-device" />
+                    </a>
+                    <div class="buttonfild">
+                        <span>Included: @(((SHouseMVC.Microwave)item).OnOff)</span><br />
+                        <span>(Т)Oven: @(((SHouseMVC.Microwave)item).Temperature)</span> &deg;C<br />
+                        <span>Mode: @(((SHouseMVC.Microwave)item).CookingModes)</span><br />
+                    </div>
+                    <div class="device-field">
+                        <a href="/Devices/TurnOffOn/@(((SHouseMVC.Microwave)item).Id)/Microwave">
+                            <img src="~/Content/Images/icon/2.png" class="button-device" />
+                        </a>
+                        <a href="/Devices/NextMode/@(((SHouseMVC.Microwave)item).Id)">
+                            <img src="~/Content/Images/icon/previous_mode.png" class="button-device" />
+                        </a>
+                        <a href="/Devices/PreviousMode/@(((SHouseMVC.Microwave)item).Id)">
+                            <img src="~/Content/Images/icon/next_mode.png" class="button-device" />
+                        </a>
+                        <a href="/Devices/Close/@(((SHouseMVC.Microwave)item).Id)/Microwave">
+                            <img src="~/Content/Images/icon/micrrocloseoff.png" class="button-device" />
+                        </a>
+                        <a href="/Devices/Open/@(((SHouseMVC.Microwave)item).Id)/Microwave">
+                            <img src="~/Content/Images/icon/microwaveoffop.png" class="button-device" />
+                        </a>
+                        <a href="/Devices/ReduceTemp/@(((SHouseMVC.Microwave)item).Id)/Microwave">
+                            <img src="~/Content/Images/icon/mint.png" class="button-device" />
+                        </a>
+                        <a href="/Devices/TempIncrease/@(((SHouseMVC.Microwave)item).Id)/Microwave">
+                            <img src="~/Content/Images/icon/maxt.png" class="button-device" />
+                        </a>
+                    </div>
+                </div>
+            }
+            if (item is SHouseMVC.Illuminator)
+            {
+                <div class="form-device">
+                    <img src="@(((SHouseMVC.Illuminator)item).Img)" class="image-device" />
+                    <a href="/Devices/Delete/@(((SHouseMVC.Illuminator)item).Id)/Illuminator">
+                        <img src="~/Content/Images/icon/1.png" class="button-remove-device" />
+                    </a><div class="buttonfild"></div>
+                    <div class="device-field">
+                        <a href="/Devices/TurnOffOn/@(((SHouseMVC.Illuminator)item).Id)/Illuminator">
+                            <img src="~/Content/Images/icon/lampoff.png" class="button-device" />
+                        </a>
+                        <a href="/Devices/SetLowBrightness/@(((SHouseMVC.Illuminator)item).Id)">
+                            <img src="~/Content/Images/icon/minm.png" class="button-device" />
+                        </a>
+                        <a href="/Devices/SetMediumBrightness/@(((SHouseMVC.Illuminator)item).Id)">
+                            <img src="~/Content/Images/icon/middiumm.png" class="button-device" />
+                        </a>
+                        <a href="/Devices/SetHighBrightness/@(((SHouseMVC.Illuminator)item).Id)">
+                            <img src="~/Content/Images/icon/higtm.png" class="button-device" />
+                        </a>
+                    </div>
+                </div>
+            }
+            if (item is SHouseMVC.Alarm)
+            {
+                <div class="form-device">
+                    <img src="@(((SHouseMVC.Alarm)item).Img)" class="image-device" />
+                    <a href="/Devices/Delete/@(((SHouseMVC.Alarm)item).Id)/Alarm">
+                        <img src="~/Content/Images/icon/1.png" class="button-remove-device" />
+                    </a>
+                    <div class="buttonfild"></div>
+                    <div class="device-field">
+                        <a href="/Devices/TurnOffOn/@(((SHouseMVC.Alarm)item).Id)/Alarm">
+                            <img src="~/Content/Images/icon/offalarm.png" class="button-device" />
+                        </a>
+                        <a href="/Devices/SetDisarmed/@(((SHouseMVC.Alarm)item).Id)">
+                            <img src="~/Content/Images/icon/alarm of.png" class=" button-device" />
+                        </a>
+                        <a href="/Devices/SetIsArmed/@(((SHouseMVC.Alarm)item).Id)">
+                            <img src="~/Content/Images/icon/onalarm.png" class="button-device" />
+                        </a>
+                        <a href="/Devices/SetNobodyHome/@(((SHouseMVC.Alarm)item).Id)">
+                            <img src="~/Content/Images/icon/supperalfrm.png" class="button-device" />
+                        </a>
+                    </div>
+                </div>
+            }
+            if (item is SHouseMVC.Fridge)
+            {
+                <div class="form-device">
+                    <img src="@(((SHouseMVC.Fridge)item).Img)" class="image-device" />
+                    <a href="/Devices/Delete/@(((SHouseMVC.Fridge)item).Id)/Fridge">
+                        <img src="~/Content/Images/icon/1.png" class="button-remove-device" />
+                    </a>
+                    <div class="buttonfild">
+                        <span>Included: @(((SHouseMVC.Fridge)item).OnOff)</span><br />
+                        <span>(Т)Fridge: @(((SHouseMVC.Fridge)item).Temperature)</span> &deg;C<br />
+                        <span>(Т)Freezer: @(((SHouseMVC.Fridge)item).Freezer.Temperature)</span> &deg;C<br />
+                    </div>
+                    <div class="device-field">
+                        <a href="/Devices/TurnOffOn/@(((SHouseMVC.Fridge)item).Id)/Fridge">
+                            <img src="~/Content/Images/icon/2.png" class="button-device" />
+                        </a>
+                        <a href="/Devices/Open/@(((SHouseMVC.Fridge)item).Id)/Fridge">
+                            <img src="~/Content/Images/icon/openfri.png" class="button-device" />
+                        </a>
+                        <a href="/Devices/Close/@(((SHouseMVC.Fridge)item).Id)/Fridge">
+                            <img src="~/Content/Images/icon/closeall.png" class="button-device" />
+                        </a>
+                        <a href="/Devices/TempIncrease/@(((SHouseMVC.Fridge)item).Id)/Fridge">
+                            <img src="~/Content/Images/icon/maxt.png" class="button-device" />
+                        </a>
+                        <a href="/Devices/ReduceTemp/@(((SHouseMVC.Fridge)item).Id)/Fridge">
+                            <img src="~/Content/Images/icon/mint.png" class="button-device" />
+                        </a>
+                        <a href="/Devices/OpenDeepFreeze/@(((SHouseMVC.Fridge)item).Id)">
+                            <img src="~/Content/Images/icon/openall.png" class="button-device" />
+                        </a>
+                        <a href="/Devices/CloseDeepFreeze/@(((SHouseMVC.Fridge)item).Id)">
+                            <img src="~/Content/Images/icon/closeall.png" class="button-device" />
+                        </a>
+                    </div>
+                </div>
+            }
+        }
+        <div id="tableBlock"></div>
+    </div>
+    @section Scripts {
+        <script>
+            $(document).ready(function () {
+                GetAllTvs();
+                $("#addTv").click(function (event) {
+                    event.preventDefault();
+                    AddTv();
+                });
+            });
+            function EditTv(tv, command) {
+                switch (command) {
+                    case "TurnOffOn":
+                        tv.OnOff = !(tv.OnOff);
+                        break;
+                    case "VolumeMinus":
+                        tv.Volume -= 10;
+                        break;
+                    case "VolumePlus":
+                        tv.Volume += 10;
+                        break;
+                    case "SoundOnOff":
+                        if (tv.Volume != 0) {
+                            tv.CurrentVolume = tv.Volume;
+                            tv.Volume = 0;
+                        }
+                        else {
+                            tv.Volume = tv.CurrentVolume;
+                        }
+                        break;
+                    case "PreviousMode":
+                        if (tv.Channel > 0 && tv.OnOff) {
+                            tv.Channel -= 1;
+                        }
+                        break;
+                    case "NextMode":
+                        if (tv.Channel < 4 && tv.OnOff) {
+                            tv.Channel += 1;
+                        }
+                        break;
+                }
+                $.ajax({
+                    url: '/api/Tvs/' + tv.Id,
+                    type: 'PUT',
+                    data: JSON.stringify(tv),
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data) {
+                        GetAllTvs();
+                    }
+                });
+            }
+            function GetTv(id, command) {
+                $.ajax({
+                    url: '/api/Tvs/' + id,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        EditTv(data, command);
+                    },
+                    error: function (x, y, z) {
+                        alert(x + '\n' + y + '\n' + z);
+                    }
+                });
+            }
+            function EditItem(el) {
+                var id = $(el).attr('data-item');
+                var command = $(el).attr('id');
+                GetTv(id, command);
+            }
+            function AddTv() {
+                var tv = {
+                    Img: "/Content/Images/222.png",
+                    OnOff: false,
+                    ChannelsId: 0,
+                    Volume: 0,
+                    CurrentVolume: 0
+                };
+                $.ajax({
+                    url: '/api/Tvs',
+                    type: 'POST',
+                    data: JSON.stringify(tv),
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data) {
+                        GetAllTvs();
+                    },
+                    error: function (x, y, z) {
+                        alert(x + '\n' + y + '\n' + z);
+                    }
+                });
+            }
+            function GetAllTvs() {
+                $.ajax({
+                    url: '/api/Tvs',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        WriteResponse(data);
+                    },
+                    error: function (x, y, z) {
+                        alert(x + '\n' + y + '\n' + z);
+                    }
+                });
+            }
+            function WriteResponse(tvs) {
+                var strResult = "";
+                $.each(tvs, function (index, tv) {
+                    strResult += "<div class='form-device'>" +
+                     "<img src='" + tv.Img + " ' class='image-device' />" +
+                                      "<a data-item='" + tv.Id + "' onclick='DeleteItem(this);' >" +
+                    "<img src='/Content/Images/icon/1.png' class='button-remove-device' /></a>" +
+                        "<div class='buttonfild'>" +
+                     "<span>Included: " + tv.OnOff + "</span><br/>" +
+                    "<span>Channel: " + tv.Channel + "</span><br/>" +
+                    "<span>Volume: " + tv.Volume + "</span></div>" +
+                                        "<div class='device-field'>"+
+                    "<a id='TurnOffOn' data-item='" + tv.Id + "' onclick='EditItem(this);' >" +
+    "<img src='/Content/Images/icon/2.png' class='button-device' /></a>" +
+                    "<a id='VolumeMinus' data-item='" + tv.Id + "' onclick='EditItem(this);' >" +
+    "<img src='/Content/Images/icon/sound min.png' class='button-device' /></a>" +
+                    "<a id='VolumePlus' data-item='" + tv.Id + "' onclick='EditItem(this);' >" +
+    "<img src='/Content/Images/icon/sound max.png' class='button-device' /></a>" +
+                    "<a id='SoundOnOff' data-item='" + tv.Id + "' onclick='EditItem(this);' >" +
+    "<img src='/Content/Images/icon/sound mute.png' class='button-device' /></a>" +
+                    "<a id='PreviousMode' data-item='" + tv.Id + "' onclick='EditItem(this);' >" +
+    "<img src='/Content/Images/icon/previous_mode.png' class='button-device' /></a>" +
+                    "<a id='NextMode' data-item='" + tv.Id + "' onclick='EditItem(this);' >" +
+    "<img src='/Content/Images/icon/next_mode.png' class='button-device' /></a></div></div>";
+                });
+                $("#tableBlock").html(strResult);
+            }
+            function DeleteTv(id) {
+                $.ajax({
+                    url: '/api/Tvs/' + id,
+                    type: 'DELETE',
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data) {
+                        GetAllTvs();
+                    },
+                    error: function (x, y, z) {
+                        alert(x + '\n' + y + '\n' + z);
+                    }
+                });
+            }
+            function DeleteItem(el) {
+                var id = $(el).attr('data-item');
+                DeleteTv(id);
+            }
+</script>
+}

@@ -1,0 +1,230 @@
+﻿@import url(reset.css);
+html, body {
+    height: 100%;
+}
+
+body {
+    font: 12px, Slab serif;
+    color: #000000;
+    background: url(Images/body.jpg);
+}
+
+h1 {
+    color: #5cb738;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px rgb(0, 219, 219), 0 0 70px rgb(0, 219, 219), 0 0 80px rgb(0, 219, 219), 0 0 100px rgb(0, 219, 219), 0 0 150px rgb(0, 219, 219);
+    font: 600% Slab serif;
+    padding-left: 120px;
+    padding: 20px 350px 90px 130px;
+}
+
+.fone {
+    min-height: 100%;
+    overflow: hidden;
+    background: rgba(30, 181, 0, 0.3);
+}
+
+.fone-footer {
+    overflow: hidden;
+    width:100%;
+    min-height: 100%;
+    background: rgba(27, 131, 77, 0.72);
+}
+
+.wrapper {
+    height: 100%;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+* html .wrapper {
+    height: 100%;
+}
+
+.header {
+    overflow: hidden;
+    background: url(Images/header.jpg);
+    border-width: 2px;
+    border-bottom-style: groove;
+    border-color: #00a472;
+}
+
+.footer {
+    margin-top: -80px;
+    color: #fff; 
+    text-align:center;
+    width: 100%;
+    height: 185px;
+    background: url(Images/footer.jpg);
+}
+
+.footer-info {
+    color: #fff;
+    padding-top: 160px;
+}
+
+.footer-dekor {
+    width: 100%;
+    height: 85px;
+    background: rgba(36, 195, 39, 0.2);
+}
+
+.img-up {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin: 20px;
+    float: right;
+    opacity: 0.7;
+    z-index: 500;
+}
+    .img-up:hover {
+        opacity: 0.9;
+    }
+
+.menu-devices {
+    height: 50px;
+    background: rgba(30, 181, 0, 0.5);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.button-menu {
+    float: left;
+    display: block;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+    .button-menu:hover {
+        background: rgba(0, 116, 2, 0.80);
+    }
+
+.field-devices {
+    box-sizing: border-box;
+    min-height: 100%;
+    padding-bottom: 390px;
+}
+
+.field-current-device {
+    overflow: auto; 
+}
+
+.form-device {
+    width: 306px;
+    height: 200px;
+    float: left;
+    margin: 10px 13px 30px 14px;
+}
+
+.button-remove-device {
+    float: left;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-right: 110px;
+    margin-top: 10px;
+}
+
+    .button-remove-device:hover {
+        background: rgba(27, 131, 77, 0.2);
+    }
+
+.button-device {
+    float: left;
+    display: inline;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin: 1px;
+    border-radius: 50%;
+    border-style: none solid;
+    border-color: rgba(0, 0, 0, 0.00);
+    border-width: 5px;
+    padding: 3px;
+}
+
+    .button-device:hover {
+        background: rgba(27, 131, 77, 0.2);
+        border-color: #fff;
+    }
+
+.device-field {
+    float:left;
+    width: 305px;
+    height: 35px;
+    text-align:center;
+}
+
+.image-device {
+    width: 160px;
+    height: 140px;
+    float: left;
+}
+
+.button-device-On {
+    float: left;
+    display: inline;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin: 1px;
+    border-radius: 50%;
+    border-style: solid solid none solid;
+    border-color: #fff;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.00);
+}
+
+.header-line {
+    height: 10px;
+}
+.q1 {
+    float: left;
+    width: auto;
+    border-radius: 50%; 
+    margin-left: 250px;
+}
+
+.q2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(0, 116, 2, 0.80);
+}
+
+.c {
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+    min-width: 50px;
+    display: inline-block;
+    padding: 5px 5px;
+    text-decoration: none;
+    color: black;
+    background-color: #DDD;
+}
+
+.buttonfild{
+    float: left;
+    width: 135px;
+    height: 100px;
+    color: #2b6b5d;
+    text-shadow: 0 0 10px rgba(30, 181, 0, 0.1), 0 0 20px rgba(30, 181, 0, 0.1), 0 0 30px rgba(30, 181, 0, 0.1), 0 0 40px rgb(0, 219, 219), 0 0 70px rgb(0, 219, 219), 0 0 80px rgb(0, 219, 219), 0 0 100px rgb(0, 219, 219), 0 0 150px rgb(0, 219, 219);
+    font: 100% Slab serif;
+    line-height: 1.2em;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.err{
+    margin-left: 20px;
+    color: rgba(209, 62, 62, 0.76);
+    text-shadow: 0 0 10px rgba(204, 107, 58, 0.86), 0 0 20px rgba(204, 107, 58, 0.86), 0 0 30px rgba(204, 107, 58, 0.86), 0 0 40px rgb(0, 219, 219), 0 0 70px rgb(0, 219, 219), 0 0 80px rgb(0, 219, 219), 0 0 100px rgb(0, 219, 219), 0 0 150px rgb(0, 219, 219);
+    font: 100% Slab serif;
+}

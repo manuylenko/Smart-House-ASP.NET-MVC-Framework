@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartHouse</title>
+    <link href="~/Content/style.css" type="text/css" rel="stylesheet" />
+    <script src="~/scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        window.onscroll = function vverh() {
+            document.getElementById('vverh').style.display = (window.pageYOffset > '200' ? 'block' : 'none');
+        }
+    </script>
+    @RenderSection("Scripts")
+</head>
+<body>
+    <div class="fone">
+        <div class="wrapper">
+            <header class="header">
+                <div class="fone">
+                    <h1>Smart House</h1>
+                    <span class="header-line"></span>
+                </div>
+                <nav>
+                    <a href='#' id='vverh' hidden="hidden"><img src="~/Content/Images/up.png" class="img-up" /></a>
+                </nav>
+            </header>
+            <menu class="menu-devices">
+                <ul>
+                    <li>
+                        <a href="/Devices/Create/Illuminator">
+                            <img src="~/Content/Images/menu-lampp.png" class="button-menu" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Devices/Create/Alarm">
+                            <img src="~/Content/Images/menu-alar.png" class="button-menu" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Devices/Create/Fridge">
+                            <img src="~/Content/Images/menu-fridge.png" class="button-menu" />
+                        </a>
+                    </li>
+                    <li>
+                        <div id="addTv">
+                            <img src="~/Content/Images/menu-tv.png" class="button-menu" />
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/Devices/Create/Microwave">
+                            <img src="~/Content/Images/menu-microwave.png" class="button-menu" />
+                        </a>
+                    </li>
+                </ul>
+            </menu>
+            <main>
+                <div class="field-current-device">
+                    @RenderBody()
+                </div><div class="field-devices"></div>
+            </main>
+        </div>
+        <div class="footer-dekor"></div>
+        <footer class="footer">
+            <div class="fone-footer">
+                <p class="footer-info">
+                    &copy;Мануйленко А.С., Smart House @DateTime.Now.Year
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
